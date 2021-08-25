@@ -11,8 +11,7 @@ namespace Cocktails
     {
         public CocktailContext() : base()
         {
-            //Database.SetInitializer<CocktailContext>(new CreateDatabaseIfNotExists<CocktailContext>());
-            Database.SetInitializer<CocktailContext>(new DropCreateDatabaseAlways<CocktailContext>());
+            Database.SetInitializer<CocktailContext>(new DropCreateDatabaseAlways<CocktailContext>());//Only have the database running when we have the project startet
         }
         public DbSet<Cocktail> Cocktails { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
